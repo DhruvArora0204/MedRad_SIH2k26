@@ -166,5 +166,12 @@ try_merge/
 
 ---
 
+## 👥 Contributors
+
+- **[Mitanshu Verma](https://github.com/MitanshuVerma)**
+- **[Dhruv Arora](https://github.com/DhruvArora0204)**
+
+---
+
 ## 📄 License
 This project is developed for clinical AI research and healthcare verification workflows.
