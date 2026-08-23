@@ -1,0 +1,182 @@
+[
+  {
+    "state": "Jharkhand",
+    "district": "Dhanbad",
+    "type": "Illegal Mining + Child Labour",
+    "riskLevel": "High"
+  },
+  {
+    "state": "Odisha",
+    "district": "Keonjhar",
+    "type": "Iron Ore Mining - Deforestation",
+    "riskLevel": "Medium"
+  },
+  {
+    "state": "Chhattisgarh",
+    "district": "Dantewada",
+    "type": "Maoist Conflict Zone",
+    "riskLevel": "High"
+  },
+  {
+    "state": "Tamil Nadu",
+    "district": "Sivakasi",
+    "type": "Child Labour - Firecracker Units",
+    "riskLevel": "High"
+  },
+  {
+    "state": "Delhi",
+    "district": "Bawana",
+    "type": "Unregulated Manufacturing",
+    "riskLevel": "Medium"
+  },
+  {
+    "state": "Bihar",
+    "district": "Gaya",
+    "type": "Child Labour - Carpet Weaving",
+    "riskLevel": "High"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Firozabad",
+    "type": "Glass Industry - Child Labour",
+    "riskLevel": "High"
+  },
+  {
+    "state": "West Bengal",
+    "district": "Murshidabad",
+    "type": "Illegal Mica Mining",
+    "riskLevel": "Medium"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Singrauli",
+    "type": "Thermal Power Pollution",
+    "riskLevel": "Medium"
+  },
+  {
+    "state": "Punjab",
+    "district": "Ludhiana",
+    "type": "Unregulated Textile Dyes",
+    "riskLevel": "Medium"
+  },
+  {
+    "state": "Andhra Pradesh",
+    "district": "Kurnool",
+    "type": "Stone Mining - Worker Exploitation",
+    "riskLevel": "Medium"
+  },
+  {
+    "state": "Karnataka",
+    "district": "Bellary",
+    "type": "Iron Ore Mining Scandal Zone",
+    "riskLevel": "High"
+  },
+  {
+    "state": "Assam",
+    "district": "Dibrugarh",
+    "type": "Tea Estates - Labour Violations",
+    "riskLevel": "Medium"
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Kota",
+    "type": "Chemical Pollution",
+    "riskLevel": "Low"
+  },
+  {
+    "state": "Haryana",
+    "district": "Panipat",
+    "type": "Unregulated Recycling Units",
+    "riskLevel": "Medium"
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Chandrapur",
+    "type": "Coal Belt - Environmental Risk",
+    "riskLevel": "Medium"
+  },
+  {
+    "state": "Odisha",
+    "district": "Koraput",
+    "type": "Tribal Land Conflict",
+    "riskLevel": "High"
+  },
+  {
+    "state": "Telangana",
+    "district": "Warangal",
+    "type": "Brick Kilns - Bonded Labour",
+    "riskLevel": "High"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Kanpur",
+    "type": "Tannery Waste Pollution",
+    "riskLevel": "High"
+  },
+  {
+    "state": "Kerala",
+    "district": "Ernakulam",
+    "type": "Chemical Industrial Belt",
+    "riskLevel": "Low"
+  },
+  {
+    "state": "Gujarat",
+    "district": "Vapi",
+    "type": "Highly Polluted Industrial Zone",
+    "riskLevel": "High"
+  },
+  {
+    "state": "Bihar",
+    "district": "Purnia",
+    "type": "Child Labour in Agriculture",
+    "riskLevel": "Medium"
+  },
+  {
+    "state": "Uttarakhand",
+    "district": "Haridwar",
+    "type": "Ganga Pollution",
+    "riskLevel": "Low"
+  },
+  {
+    "state": "Manipur",
+    "district": "Churachandpur",
+    "type": "Conflict Zone - Ethnic Tensions",
+    "riskLevel": "High"
+  },
+  {
+    "state": "Nagaland",
+    "district": "Mon",
+    "type": "Illegal Timber Trade",
+    "riskLevel": "Medium"
+  },
+  {
+    "state": "Meghalaya",
+    "district": "East Jaintia Hills",
+    "type": "Rat Hole Mining",
+    "riskLevel": "High"
+  },
+  {
+    "state": "Tripura",
+    "district": "Unakoti",
+    "type": "Forest Encroachment - Tribal Displacement",
+    "riskLevel": "Medium"
+  },
+  {
+    "state": "Himachal Pradesh",
+    "district": "Solan",
+    "type": "Factory Labour Law Non-compliance",
+    "riskLevel": "Low"
+  },
+  {
+    "state": "Goa",
+    "district": "South Goa",
+    "type": "Iron Ore Mining - Ecological Risk",
+    "riskLevel": "Medium"
+  },
+  {
+    "state": "Sikkim",
+    "district": "East Sikkim",
+    "type": "Hydro Project Labour Abuse",
+    "riskLevel": "Low"
+  }
+]

@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --color-radis-dark: #0a0a0d;
+  --color-radis-panel: #15151a;
+  --color-radis-accent: #5227FF;
+  
+  --color-medishare-light: #f8fafc;
+  --color-medishare-panel: #ffffff;
+  --color-medishare-accent: #FF9FFC;
+
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Outfit', system-ui, sans-serif;
+
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@layer base {
+  body {
+    background-color: #050505;
+    color: white;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    background-image: 
+      radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+      radial-gradient(at 50% 0%, hsla(225,39%,30%,0.05) 0, transparent 50%), 
+      radial-gradient(at 100% 0%, hsla(339,49%,30%,0.05) 0, transparent 50%);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.025em;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    background-color: rgb(255 255 255 / 0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgb(255 255 255 / 0.1);
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  }
+  .btn-primary {
+    padding: 0.75rem 1.5rem;
+    background-color: white;
+    color: black;
+    font-weight: 600;
+    border-radius: 9999px;
+    transition-property: all;
+    transition-duration: 300ms;
+  }
+  .btn-primary:hover {
+    background-color: #f3f4f6;
+  }
+  .btn-secondary {
+    padding: 0.75rem 1.5rem;
+    background-color: rgb(255 255 255 / 0.1);
+    color: white;
+    font-weight: 600;
+    border-radius: 9999px;
+    border: 1px solid rgb(255 255 255 / 0.05);
+    transition-property: all;
+    transition-duration: 300ms;
+  }
+  .btn-secondary:hover {
+    background-color: rgb(255 255 255 / 0.2);
+  }
+  .heading-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, white, white, rgb(255 255 255 / 0.6));
+  }
+}
+
+/* Base custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(255 255 255 / 0.1);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(255 255 255 / 0.2);
+}
