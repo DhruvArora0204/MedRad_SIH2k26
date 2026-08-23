@@ -30,7 +30,7 @@ const Navigation: React.FC = () => {
 
   const navItems = [
     { 
-      name: 'RADIS AI', 
+      name: 'RADIS', 
       label: 'Radiology Suite',
       path: '/radis', 
       icon: BrainCircuit,
