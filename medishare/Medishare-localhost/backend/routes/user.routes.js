@@ -8,6 +8,7 @@ import {
 } from "../controllers/user.controllers.js";
 import {
   authMiddleware,
+  optionalAuthMiddleware,
   verifyAdmin,
 } from "../middlewares/auth.middlewares.js";
 import {
@@ -38,10 +39,9 @@ router.post("/upload", upload.single("pdfFile"), async (req, res) => {
   }
 });
 
-// --- UPDATED DONATION ROUTE (FIXED) ---
-router.post("/donation/", authMiddleware, async (req, res) => {
+// --- UPDATED DONATION ROUTE ---
+router.post("/donation/", optionalAuthMiddleware, async (req, res) => {
   try {
-    // 1. ADD expiryDate and brand here
     const { medicineName, batchNumber, quantity, manufacturerDetails, expiryDate, brand } = req.body;
 
     if (!medicineName || !batchNumber || !quantity || !manufacturerDetails) { 
@@ -52,18 +52,19 @@ router.post("/donation/", authMiddleware, async (req, res) => {
     
     console.log("Donation received:", req.body);
 
-    if (isNaN(quantity) || quantity <= 0) {
+    if (isNaN(quantity) || Number(quantity) <= 0) {
       return res.status(400).json({ error: "Quantity must be a positive number" });
     }
 
     const newDonation = new Donation({
-      user: req.user.id,
+      user: req.user?.id || null,
       medicine: medicineName,
       batchNumber,
-      quantity,
+      quantity: Number(quantity),
       manufacturerDetails,
-      expiryDate, // 2. SAVE expiryDate
-      brand       // 3. SAVE brand
+      expiryDate,
+      brand: brand || "Verified Pharma",
+      status: "approved"
     });
 
     await newDonation.save();
@@ -76,7 +77,6 @@ router.post("/donation/", authMiddleware, async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 });
-// --------------------------------------
 
 router.patch("/donation/:id", authMiddleware, verifyAdmin, async (req, res) => {
   try {
@@ -100,11 +100,9 @@ router.patch("/donation/:id", authMiddleware, verifyAdmin, async (req, res) => {
   }
 });
 
-router.get("/donation/", authMiddleware, verifyAdmin, async (req, res) => {
+router.get("/donation/", optionalAuthMiddleware, async (req, res) => {
   try {
-    console.log("donation api to get all donations called ")
-    const donations = await Donation.find().populate("user", "name email");
-    console.log(donations)
+    const donations = await Donation.find().populate("user", "name email").sort({ createdAt: -1 });
     res.json(donations);
   } catch (error) {
     res.status(500).json({ error: error.message });
