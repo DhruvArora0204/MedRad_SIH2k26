@@ -11,12 +11,12 @@ function App() {
     <Router>
       <div className="flex flex-col min-h-screen">
         <Navigation />
-        <main className="flex-grow pt-20">
+        <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Landing />} />
-            <Route path="/radis/*" element={<Radis />} />
-            <Route path="/medishare/*" element={<MediShare />} />
-            <Route path="/admin/*" element={<Admin />} />
+            <Route path="/radis/*" element={<div className="pt-20"><Radis /></div>} />
+            <Route path="/medishare/*" element={<div className="pt-20"><MediShare /></div>} />
+            <Route path="/admin/*" element={<div className="pt-20"><Admin /></div>} />
           </Routes>
         </main>
         <Footer />

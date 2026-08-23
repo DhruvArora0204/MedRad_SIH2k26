@@ -10,7 +10,7 @@ const Landing: React.FC = () => {
     <div className="w-full flex flex-col items-center">
       
       {/* HERO SECTION */}
-      <section className="relative w-full h-[90vh] flex flex-col items-center justify-center overflow-hidden">
+      <section className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden pt-16 pb-12">
         {/* Background ColorBends */}
         <div className="absolute inset-0 z-0 opacity-80">
            <ColorBends
@@ -39,7 +39,7 @@ const Landing: React.FC = () => {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8 backdrop-blur-md"
           >
             <span className="w-2 h-2 rounded-full bg-radis-accent animate-pulse-slow"></span>
-            <span className="text-sm font-medium tracking-wide text-white/80">THE FUTURE OF MEDICAL INTELLIGENCE</span>
+            <span className="text-sm font-medium tracking-wide text-white/80 font-mono">MEDRAD • CLINICAL AI & HEALTHCARE OS</span>
           </motion.div>
 
           <motion.h1 
@@ -118,49 +118,89 @@ const Landing: React.FC = () => {
         </div>
       </section>
 
-      {/* PRODUCT ECOSYSTEM */}
+      {/* PRODUCT ECOSYSTEM / DESCRIPTIONS */}
       <section className="w-full max-w-7xl px-6 py-24 grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* RADIS CARD */}
         <motion.div 
-          whileHover={{ y: -5 }}
-          className="glass-panel p-8 md:p-12 relative overflow-hidden group cursor-pointer"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="glass-panel p-8 md:p-12 relative overflow-hidden group"
         >
-          <div className="absolute top-0 right-0 w-64 h-64 bg-radis-accent/10 blur-[100px] rounded-full group-hover:bg-radis-accent/20 transition-colors duration-500"></div>
+          <div className="absolute top-0 right-0 w-72 h-72 bg-radis-accent/10 blur-[100px] rounded-full group-hover:bg-radis-accent/20 transition-colors duration-500 pointer-events-none"></div>
           
           <div className="relative z-10">
-            <div className="w-12 h-12 bg-radis-accent/20 text-radis-accent rounded-xl flex items-center justify-center mb-6">
+            <div className="w-12 h-12 bg-radis-accent/20 text-radis-accent rounded-xl flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(82,39,255,0.2)]">
               <BrainCircuit className="w-6 h-6" />
             </div>
-            <h2 className="text-3xl font-display font-bold mb-4">RADIS</h2>
-            <h3 className="text-xl text-white/80 mb-4 font-light">Radiology AI Decision Support</h3>
-            <p className="text-white/50 mb-8 leading-relaxed">
-              AI-assisted analysis of brain CT scans with hemorrhage detection, localization, severity assessment, and automated reporting.
+            <div className="flex items-center gap-3 mb-2">
+              <h2 className="text-3xl font-display font-bold text-white">RADIS</h2>
+              <span className="text-[11px] font-mono font-semibold px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">
+                Clinical AI
+              </span>
+            </div>
+            <h3 className="text-lg text-white/80 mb-4 font-light">Radiology Decision Support Engine</h3>
+            <p className="text-white/60 mb-6 leading-relaxed text-sm">
+              Deep learning multi-label classification and localization for intracranial hemorrhage (ICH) across brain CT scans, featuring Grad-CAM visual heatmaps, dynamic HU windowing, and automated clinical drafts.
             </p>
-            <Link to="/radis" className="inline-flex items-center text-radis-accent hover:text-white transition-colors font-medium">
-              Explore Workstation <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
+            
+            {/* Feature Highlights (Informational only) */}
+            <div className="flex flex-wrap gap-2 pt-2 border-t border-white/[0.08]">
+              <span className="text-xs px-3 py-1 rounded-lg bg-white/[0.04] border border-white/[0.08] text-white/70">
+                ResNet-50 Multi-Label Model
+              </span>
+              <span className="text-xs px-3 py-1 rounded-lg bg-white/[0.04] border border-white/[0.08] text-white/70">
+                Grad-CAM Activation Maps
+              </span>
+              <span className="text-xs px-3 py-1 rounded-lg bg-white/[0.04] border border-white/[0.08] text-white/70">
+                Brain / Bone / Subdural Windowing
+              </span>
+              <span className="text-xs px-3 py-1 rounded-lg bg-white/[0.04] border border-white/[0.08] text-white/70">
+                DICOM & Standard Scan Ingestion
+              </span>
+            </div>
           </div>
         </motion.div>
 
         {/* MEDISHARE CARD */}
         <motion.div 
-          whileHover={{ y: -5 }}
-          className="glass-panel p-8 md:p-12 relative overflow-hidden group cursor-pointer"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="glass-panel p-8 md:p-12 relative overflow-hidden group"
         >
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-medishare-accent/10 blur-[100px] rounded-full group-hover:bg-medishare-accent/20 transition-colors duration-500"></div>
+          <div className="absolute bottom-0 left-0 w-72 h-72 bg-medishare-accent/10 blur-[100px] rounded-full group-hover:bg-medishare-accent/20 transition-colors duration-500 pointer-events-none"></div>
           
           <div className="relative z-10">
-            <div className="w-12 h-12 bg-medishare-accent/20 text-medishare-accent rounded-xl flex items-center justify-center mb-6">
+            <div className="w-12 h-12 bg-medishare-accent/20 text-medishare-accent rounded-xl flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(255,159,252,0.2)]">
               <ShieldCheck className="w-6 h-6" />
             </div>
-            <h2 className="text-3xl font-display font-bold mb-4">MediShare</h2>
-            <h3 className="text-xl text-white/80 mb-4 font-light">AI + Blockchain Network</h3>
-            <p className="text-white/50 mb-8 leading-relaxed">
-              Medical report intelligence, medicine verification, blockchain authentication, secure medicine donations, and safe access.
+            <div className="flex items-center gap-3 mb-2">
+              <h2 className="text-3xl font-display font-bold text-white">MediShare</h2>
+              <span className="text-[11px] font-mono font-semibold px-2.5 py-0.5 rounded-full bg-fuchsia-500/10 text-fuchsia-300 border border-fuchsia-500/20">
+                Web3 + AI
+              </span>
+            </div>
+            <h3 className="text-lg text-white/80 mb-4 font-light">Healthcare Verification & Intelligence</h3>
+            <p className="text-white/60 mb-6 leading-relaxed text-sm">
+              Decentralized medicine batch verification via Solidity smart contracts, AI-powered diagnostic lab report summarization using Gemini, and a community surplus medicine donation network.
             </p>
-            <Link to="/medishare" className="inline-flex items-center text-medishare-accent hover:text-white transition-colors font-medium">
-              Open MediShare <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
+
+            {/* Feature Highlights (Informational only) */}
+            <div className="flex flex-wrap gap-2 pt-2 border-t border-white/[0.08]">
+              <span className="text-xs px-3 py-1 rounded-lg bg-white/[0.04] border border-white/[0.08] text-white/70">
+                Ethereum Smart Contracts
+              </span>
+              <span className="text-xs px-3 py-1 rounded-lg bg-white/[0.04] border border-white/[0.08] text-white/70">
+                Gemini Medical Report Parsing
+              </span>
+              <span className="text-xs px-3 py-1 rounded-lg bg-white/[0.04] border border-white/[0.08] text-white/70">
+                Batch QR Code Verification
+              </span>
+              <span className="text-xs px-3 py-1 rounded-lg bg-white/[0.04] border border-white/[0.08] text-white/70">
+                Surplus Medicine Donation Portal
+              </span>
+            </div>
           </div>
         </motion.div>
       </section>
