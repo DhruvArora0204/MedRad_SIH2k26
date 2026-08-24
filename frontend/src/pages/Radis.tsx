@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { 
   Upload, FileDown, AlertCircle, Search, Map, Maximize2, 
   Image as ImageIcon, Activity, BrainCircuit, FileText, Trash2, RefreshCw, Info,
-  ShieldAlert, CheckCircle2, Copy, Check, Eye, EyeOff, ZoomIn, ZoomOut, RotateCcw,
+  ShieldAlert, CheckCircle2, Copy, Check, Eye, EyeOff, ZoomIn, ZoomOut,
   Sparkles, Stethoscope, AlertTriangle, Layers
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -476,13 +476,6 @@ const Radis: React.FC = () => {
               title="Zoom Out"
             >
               <ZoomOut className="w-4 h-4" />
-            </button>
-            <button 
-              onClick={() => { setZoomLevel(1); setIsInverted(false); }}
-              className="p-1.5 rounded-lg bg-white/[0.04] border border-white/[0.08] text-white/60 hover:text-white transition-colors"
-              title="Reset View"
-            >
-              <RotateCcw className="w-4 h-4" />
             </button>
           </div>
         </div>
